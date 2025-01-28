@@ -5,6 +5,11 @@ body {
   margin: 0rem;
   overflow: hidden;
 }
+#name {
+  color: #9e7b9b;
+  text-align: center;
+  font-size: 2rem;
+}
 
 #track {
   display: flex;
@@ -29,17 +34,19 @@ body {
   user-select: none;
 }
 
-#about-me {
+#about-me,
+#history {
   position: relative;
   text-align: center;
   transition: 0.5s ease-in-out;
 }
 
-#about-me:hover {
+#about-me:hover,
+#history:hover {
   cursor: pointer;
 }
 
-#about-me > #aboutMeTitle {
+#aboutMeTitle {
   color: #404040;
   font-family: Encode Sans Semi Expanded, serif;
   font-weight: 500;
@@ -58,17 +65,56 @@ body {
   padding-right: 1.75rem;
 }
 
+#historyTitle {
+  color: #404040;
+  font-family: Encode Sans Semi Expanded, serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.15rem;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(0, -31rem);
+}
+
 /* Expanded Div's Styling */
+
+/* About Me */
 
 #expandedAboutMe {
   color: white;
   background-color: #374a67;
   outline: none;
-  font-size: 16px;
+  font-size: 2.5rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+#expandedAboutMe > p {
+  font-size: 1.95rem;
+  line-height: 1.75;
+  padding: 1.25rem;
+  text-align: start;
+}
+
+/* History */
+
+#expandedHistory {
+  color: white;
+  background-color: #374a67;
+  background-color: pink;
+  outline: none;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   height: 100%;
   width: 100%;
   transition: 0.5s ease-in-out;
@@ -81,6 +127,10 @@ body {
 
 .hidden {
   display: none;
+}
+
+.focused {
+  z-index: 1;
 }
 
 .color-change {

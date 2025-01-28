@@ -6,7 +6,7 @@ window.onmousedown = (e) => {
 
 window.onmouseup = (e) => {
   track.dataset.mouseDownAt = "0";
-  track.dataset.prevPercentage = track.dataset.percentage;
+  track.dataset.prevPercentage = track.dataset.percentage || "0";
 };
 
 window.onmousemove = (e) => {
@@ -39,12 +39,24 @@ window.onmousemove = (e) => {
   }
 };
 
-function expand() {
+function expandAbout() {
   const AboutMe = document.getElementById("about-me");
   const expAboutMe = document.getElementById("expandedAboutMe");
   const aboutTitle = document.getElementById("aboutMeTitle");
   AboutMe.classList.toggle("expanded");
+  AboutMe.classList.toggle("focused");
 
   aboutTitle.classList.toggle("hidden");
   expAboutMe.classList.toggle("hidden");
+}
+
+function expandHistory() {
+  const history = document.getElementById("history");
+  const expHistory = document.getElementById("expandedHistory");
+  const historyTitle = document.getElementById("HistoryTitle");
+  history.classList.toggle("expanded");
+  history.classList.toggle("focused");
+
+  historyTitle.classList.toggle("hidden");
+  expHistory.classList.toggle("hidden");
 }
