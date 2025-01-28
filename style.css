@@ -24,3 +24,121 @@ body {
   height: 56vmin;
   object-position: center;
 }
+
+.container {
+  user-select: none;
+}
+
+#about-me {
+  position: relative;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+#about-me:hover {
+  cursor: pointer;
+}
+
+#about-me > #aboutMeTitle {
+  color: #404040;
+  font-family: Encode Sans Semi Expanded, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.5rem;
+  text-shadow: 4px 4px 2px #9e7b9b;
+  width: 7rem;
+  background: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  text-align: end;
+  padding-right: 1.75rem;
+}
+
+/* Expanded Div's Styling */
+
+#expandedAboutMe {
+  color: white;
+  background-color: #374a67;
+  outline: none;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+/* Utility Classes */
+.expanded {
+  transform: scale(1.5);
+}
+
+.hidden {
+  display: none;
+}
+
+.color-change {
+  color: red;
+}
+
+/* Font Classes */
+
+.encode-sans-semi-expanded-thin {
+  font-family: "Encode Sans Semi Expanded", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.encode-sans-semi-expanded-extralight {
+  font-family: "Encode Sans Semi Expanded", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.encode-sans-semi-expanded-light {
+  font-family: "Encode Sans Semi Expanded", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.encode-sans-semi-expanded-regular {
+  font-family: "Encode Sans Semi Expanded", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.encode-sans-semi-expanded-medium {
+  font-family: "Encode Sans Semi Expanded", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.encode-sans-semi-expanded-semibold {
+  font-family: "Encode Sans Semi Expanded", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.encode-sans-semi-expanded-bold {
+  font-family: "Encode Sans Semi Expanded", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.encode-sans-semi-expanded-extrabold {
+  font-family: "Encode Sans Semi Expanded", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.encode-sans-semi-expanded-black {
+  font-family: "Encode Sans Semi Expanded", serif;
+  font-weight: 900;
+  font-style: normal;
+}

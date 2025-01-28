@@ -1,4 +1,3 @@
-
 const track = document.getElementById("track");
 
 window.onmousedown = (e) => {
@@ -39,3 +38,13 @@ window.onmousemove = (e) => {
     );
   }
 };
+
+function expand() {
+  const AboutMe = document.getElementById("about-me");
+  const expAboutMe = document.getElementById("expandedAboutMe");
+  const aboutTitle = document.getElementById("aboutMeTitle");
+  AboutMe.classList.toggle("expanded");
+
+  aboutTitle.classList.toggle("hidden");
+  expAboutMe.classList.toggle("hidden");
+}
