@@ -1,3 +1,5 @@
+// Scrolling the Track
+
 const track = document.getElementById("track");
 
 window.onmousedown = (e) => {
@@ -39,6 +41,8 @@ window.onmousemove = (e) => {
   }
 };
 
+// Opening Track Elements
+
 function expandAbout() {
   const AboutMe = document.getElementById("about-me");
   const expAboutMe = document.getElementById("expandedAboutMe");
@@ -53,10 +57,44 @@ function expandAbout() {
 function expandHistory() {
   const history = document.getElementById("history");
   const expHistory = document.getElementById("expandedHistory");
-  const historyTitle = document.getElementById("HistoryTitle");
+  const historyTitle = document.getElementById("historyTitle");
   history.classList.toggle("expanded");
   history.classList.toggle("focused");
 
   historyTitle.classList.toggle("hidden");
   expHistory.classList.toggle("hidden");
+}
+
+function expandPitch() {
+  const pitch = document.getElementById("pitch");
+  const expPitch = document.getElementById("expandedPitch");
+  const pitchTitle = document.getElementById("pitchTitle");
+  pitch.classList.toggle("expanded");
+  pitch.classList.toggle("focused");
+
+  pitchTitle.classList.toggle("hidden");
+  expPitch.classList.toggle("hidden");
+}
+
+function expandProjects() {
+  const projects = document.getElementById("projects");
+  const expProjects = document.getElementById("expandedProjects");
+  const projectsTitle = document.getElementById("projectsTitle");
+  projects.classList.toggle("expanded");
+  projects.classList.toggle("focused");
+
+  projectsTitle.classList.toggle("hidden");
+  expProjects.classList.toggle("hidden");
+}
+
+
+function expandContacts() {
+  const contacts = document.getElementById("contacts");
+  const expContacts = document.getElementById("expandedContacts");
+  const contactsTitle = document.getElementById("contactsTitle");
+  contacts.classList.toggle("expanded");
+  contacts.classList.toggle("focused");
+
+  contactsTitle.classList.toggle("hidden");
+  expContacts.classList.toggle("hidden");
 }

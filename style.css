@@ -35,25 +35,61 @@ body {
 }
 
 #about-me,
-#history {
+#history,
+#pitch,
+#projects,
+#contacts {
   position: relative;
   text-align: center;
   transition: 0.5s ease-in-out;
 }
 
 #about-me:hover,
-#history:hover {
+#history:hover,
+#pitch:hover,
+#projects:hover,
+#contacts:hover {
   cursor: pointer;
 }
+
+.logos {
+  height: 2.75rem;
+  width: 2rem;
+  background-color: #9e7b9b;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.logoLinks {
+  color: #404040;
+  font-family: Encode Sans Semi Expanded, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.5em;
+}
+
+#phone {
+  color: #404040;
+  font-family: Encode Sans Semi Expanded, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.75em;
+}
+
+
+
+/* Expanded Div's Styling */
+
+/* About Me */
 
 #aboutMeTitle {
   color: #404040;
   font-family: Encode Sans Semi Expanded, serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 2.5rem;
+  font-size: 2.5em;
   text-shadow: 4px 4px 2px #9e7b9b;
-  width: 7rem;
   background: none;
   position: absolute;
   top: 50%;
@@ -65,29 +101,11 @@ body {
   padding-right: 1.75rem;
 }
 
-#historyTitle {
-  color: #404040;
-  font-family: Encode Sans Semi Expanded, serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 2.15rem;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  width: 100%;
-  transform: translate(0, -31rem);
-}
-
-/* Expanded Div's Styling */
-
-/* About Me */
-
 #expandedAboutMe {
-  color: white;
-  background-color: #374a67;
+  color: #262626;
+  background-color: #cccccc;
   outline: none;
-  font-size: 2.5rem;
+  font-size: 1.25em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -98,7 +116,6 @@ body {
 }
 
 #expandedAboutMe > p {
-  font-size: 1.95rem;
   line-height: 1.75;
   padding: 1.25rem;
   text-align: start;
@@ -106,18 +123,156 @@ body {
 
 /* History */
 
+#historyTitle {
+  color: #404040;
+  font-family: Encode Sans Semi Expanded, serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.55em;
+  text-align: center;
+  background: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -23.5%);
+}
+
 #expandedHistory {
-  color: white;
-  background-color: #374a67;
-  background-color: pink;
+  color: #262626;
+  background-color: #cccccc;
   outline: none;
-  font-size: 2.5rem;
+  font-size: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  padding-right: 5px;
+  transform: translate(-50%, -50%);
+}
+
+#expandedHistory > ul,
+#expandedPitch > ul,
+#expandedProjects > ul {
+  text-align: start;
+  list-style: square;
+}
+
+#expandedHistory > ul > li,
+#expandedPitch > ul > li,
+#expandedProjects > ul > li {
+  font-weight: 800;
+  color: #9e7b9b;
+}
+
+/* Pitch */
+
+#pitchTitle {
+  color: #404040;
+  font-family: Encode Sans Semi Expanded, serif;
+  font-weight: 500;
+  font-size: 2rem;
+  font-style: normal;
+  background: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -45%);
+}
+
+#expandedPitch {
+  color: #262626;
+  background-color: #cccccc;
+  outline: none;
+  font-size: 1rem;
   position: absolute;
   top: 50%;
   left: 50%;
   height: 100%;
   width: 100%;
   transition: 0.5s ease-in-out;
+  transform: translate(-50%, -50%);
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Projects */
+
+#projectsTitle {
+  color: #404040;
+  font-family: Encode Sans Semi Expanded, serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+    1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+    1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
+  background: none;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+#expandedProjects {
+  color: #262626;
+  background-color: #cccccc;
+  outline: none;
+  font-size: 1.25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  transform: translate(-50%, -50%);
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Contacts */
+
+#contactsTitle {
+  color: #404040;
+  font-family: Encode Sans Semi Expanded, serif;
+  font-weight: 500;
+  font-size: 2rem;
+  font-style: normal;
+  background: none;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  height: 100%;
+  transform: translate(-50%, -45%);
+}
+
+#contacts > h1 {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+#expandedContacts {
+  color: #262626;
+  background-color: #cccccc;
+  outline: none;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  transform: translate(-50%, -50%);
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 /* Utility Classes */
@@ -131,10 +286,6 @@ body {
 
 .focused {
   z-index: 1;
-}
-
-.color-change {
-  color: red;
 }
 
 /* Font Classes */
