@@ -4,11 +4,7 @@ body {
   background-color: #0e1116;
   margin: 0rem;
   overflow: hidden;
-}
-#name {
-  color: #9e7b9b;
-  text-align: center;
-  font-size: 2rem;
+  min-width: 800px;
 }
 
 #track {
@@ -77,8 +73,6 @@ body {
   font-size: 1.75em;
 }
 
-
-
 /* Expanded Div's Styling */
 
 /* About Me */
@@ -98,7 +92,7 @@ body {
   height: 100%;
   width: 100%;
   text-align: end;
-  padding-right: 1.75rem;
+  padding-right: 1.75em;
 }
 
 #expandedAboutMe {
@@ -117,7 +111,7 @@ body {
 
 #expandedAboutMe > p {
   line-height: 1.75;
-  padding: 1.25rem;
+  padding: 1.25em;
   text-align: start;
 }
 
@@ -173,7 +167,7 @@ body {
   color: #404040;
   font-family: Encode Sans Semi Expanded, serif;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2em;
   font-style: normal;
   background: none;
   position: absolute;
@@ -187,7 +181,7 @@ body {
   color: #262626;
   background-color: #cccccc;
   outline: none;
-  font-size: 1rem;
+  font-size: 1em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -195,8 +189,8 @@ body {
   width: 100%;
   transition: 0.5s ease-in-out;
   transform: translate(-50%, -50%);
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /* Projects */
@@ -206,7 +200,7 @@ body {
   font-family: Encode Sans Semi Expanded, serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 3em;
   text-align: center;
   text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
     1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
@@ -226,7 +220,7 @@ body {
   color: #262626;
   background-color: #cccccc;
   outline: none;
-  font-size: 1.25rem;
+  font-size: 1.25em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -234,8 +228,8 @@ body {
   width: 100%;
   transition: 0.5s ease-in-out;
   transform: translate(-50%, -50%);
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /* Contacts */
@@ -244,7 +238,7 @@ body {
   color: #404040;
   font-family: Encode Sans Semi Expanded, serif;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2em;
   font-style: normal;
   background: none;
   position: absolute;
@@ -263,7 +257,7 @@ body {
   color: #262626;
   background-color: #cccccc;
   outline: none;
-  font-size: 1rem;
+  font-size: 1em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -271,8 +265,8 @@ body {
   width: 100%;
   transition: 0.5s ease-in-out;
   transform: translate(-50%, -50%);
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /* Utility Classes */
