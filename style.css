@@ -2,9 +2,9 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #0e1116;
+  background-image: linear-gradient(to right, #0e1116, #374a67 50%);
   margin: 0rem;
   overflow: hidden;
-  min-width: 800px;
 }
 
 #track {
@@ -50,7 +50,7 @@ body {
 
 .logos {
   height: 2.75rem;
-  width: 2rem;
+  width: 50%;
   background-color: #9e7b9b;
   padding: 1rem;
   border-radius: 1rem;
@@ -71,6 +71,12 @@ body {
   font-weight: 500;
   font-style: normal;
   font-size: 1.75em;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
 }
 
 /* Expanded Div's Styling */
@@ -282,58 +288,186 @@ body {
   z-index: 1;
 }
 
-/* Font Classes */
+/* Media Queries */
 
-.encode-sans-semi-expanded-thin {
-  font-family: "Encode Sans Semi Expanded", serif;
-  font-weight: 100;
-  font-style: normal;
+@media (max-width: 600px) {
+  #aboutMeTitle {
+    font-size: 4.75vw;
+  }
+
+  #expandedAboutMe {
+    font-size: 2.35vw;
+  }
+
+  #historyTitle {
+    font-size: 3.5vw;
+  }
+
+  #expandedHistory {
+    font-size: 1.75vw;
+  }
+
+  #pitchTitle {
+    font-size: 4.25vw;
+  }
+
+  #expandedPitch {
+    font-size: 1.75vw;
+  }
+
+  #projectsTitle {
+    font-size: 5.75vw;
+  }
+
+  #expandedProjects {
+    font-size: 2.5vw;
+  }
+
+  #contactsTitle {
+    font-size: 4.25vw;
+  }
+
+  #expandedContacts {
+    font-size: 1.85vw;
+  }
+
+  .logos {
+    width: 5vw;
+    height: 4vh;
+  }
 }
 
-.encode-sans-semi-expanded-extralight {
-  font-family: "Encode Sans Semi Expanded", serif;
-  font-weight: 200;
-  font-style: normal;
+@media (min-width: 600px) {
+  #aboutMeTitle {
+    font-size: 4.5vw;
+  }
+
+  #expandedAboutMe {
+    font-size: 2.25vw;
+  }
+
+  #historyTitle {
+    font-size: 3.5vw;
+  }
+
+  #expandedHistory {
+    font-size: 1.65vw;
+  }
+
+  #pitchTitle {
+    font-size: 4vw;
+  }
+
+  #expandedPitch {
+    font-size: 1.65vw;
+  }
+
+  #projectsTitle {
+    font-size: 5.5vw;
+  }
+
+  #expandedProjects {
+    font-size: 2.25vw;
+  }
+
+  #contactsTitle {
+    font-size: 4.25vw;
+  }
+
+  #expandedContacts {
+    font-size: 1.5vw;
+  }
+  .logos {
+    width: 5vw;
+    height: 4vh;
+  }
 }
 
-.encode-sans-semi-expanded-light {
-  font-family: "Encode Sans Semi Expanded", serif;
-  font-weight: 300;
-  font-style: normal;
+@media (min-width: 768px) {
+  #aboutMeTitle {
+    font-size: 4vw;
+  }
+
+  #expandedAboutMe {
+    font-size: 1.5vw;
+  }
+
+  #historyTitle {
+    font-size: 2.5vw;
+  }
+
+  #expandedHistory {
+    font-size: 1.15vw;
+  }
+
+  #pitchTitle {
+    font-size: 2.5vw;
+  }
+
+  #expandedPitch {
+    font-size: 1.15vw;
+  }
+
+  #projectsTitle {
+    font-size: 3.5vw;
+  }
+
+  #expandedProjects {
+    font-size: 1.5vw;
+  }
+
+  #contactsTitle {
+    font-size: 2.5vw;
+  }
+
+  #expandedContacts {
+    font-size: 0.95vw;
+  }
 }
 
-.encode-sans-semi-expanded-regular {
-  font-family: "Encode Sans Semi Expanded", serif;
-  font-weight: 400;
-  font-style: normal;
-}
+@media (min-width: 1200px) {
+  #aboutMeTitle {
+    font-size: 2vw;
+  }
 
-.encode-sans-semi-expanded-medium {
-  font-family: "Encode Sans Semi Expanded", serif;
-  font-weight: 500;
-  font-style: normal;
-}
+  #expandedAboutMe {
+    font-size: 1.15vw;
+  }
 
-.encode-sans-semi-expanded-semibold {
-  font-family: "Encode Sans Semi Expanded", serif;
-  font-weight: 600;
-  font-style: normal;
-}
+  #historyTitle {
+    font-size: 1.5vw;
+  }
 
-.encode-sans-semi-expanded-bold {
-  font-family: "Encode Sans Semi Expanded", serif;
-  font-weight: 700;
-  font-style: normal;
-}
+  #expandedHistory {
+    font-size: 0.85vw;
+  }
 
-.encode-sans-semi-expanded-extrabold {
-  font-family: "Encode Sans Semi Expanded", serif;
-  font-weight: 800;
-  font-style: normal;
-}
+  #pitchTitle {
+    font-size: 1.85vw;
+  }
 
-.encode-sans-semi-expanded-black {
-  font-family: "Encode Sans Semi Expanded", serif;
-  font-weight: 900;
-  font-style: normal;
+  #expandedPitch {
+    font-size: 0.85vw;
+  }
+
+  #projectsTitle {
+    font-size: 2.5vw;
+  }
+
+  #expandedProjects {
+    font-size: 1.15vw;
+  }
+
+  #contactsTitle {
+    font-size: 1.5vw;
+  }
+
+  #expandedContacts {
+    font-size: 0.75vw;
+  }
+
+  .logos {
+    height: 5vh;
+    width: 3vw;
+  }
 }
