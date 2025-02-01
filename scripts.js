@@ -1,26 +1,69 @@
 // Scrolling the Track
-
 const track = document.getElementById("track");
 
+let isMouseDown = false;
+
+// For Mouse Events
 window.onmousedown = (e) => {
   track.dataset.mouseDownAt = e.clientX;
+  isMouseDown = true;
 };
 
-window.onmouseup = (e) => {
+window.onmouseup = () => {
   track.dataset.mouseDownAt = "0";
   track.dataset.prevPercentage = track.dataset.percentage || "0";
+  isMouseDown = false;
 };
 
 window.onmousemove = (e) => {
-  if (track.dataset.mouseDownAt === "0") return;
+  if (!isMouseDown) return;
 
   const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
     maxDelta = window.innerWidth / 2;
 
   const percentage = (mouseDelta / maxDelta) * -100,
     nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
-  Math.min(nextPercentage, 0);
-  Math.max(nextPercentage, -100);
+
+  track.dataset.percentage = nextPercentage;
+
+  track.animate(
+    {
+      transform: `translate(${nextPercentage}%, -50%)`,
+    },
+    { duration: 1200, fill: "forwards" }
+  );
+
+  for (const container of track.getElementsByClassName("container")) {
+    container.animate(
+      {
+        objectPosition: `${100 + nextPercentage}% center`,
+      },
+      { duration: 1200, fill: "forwards" }
+    );
+  }
+};
+
+// For Touch Events (for mobile devices)
+window.ontouchstart = (e) => {
+  track.dataset.mouseDownAt = e.touches[0].clientX;
+  isMouseDown = true;
+};
+
+window.ontouchend = () => {
+  track.dataset.mouseDownAt = "0";
+  track.dataset.prevPercentage = track.dataset.percentage || "0";
+  isMouseDown = false;
+};
+
+window.ontouchmove = (e) => {
+  if (!isMouseDown) return;
+
+  const touchDelta =
+      parseFloat(track.dataset.mouseDownAt) - e.touches[0].clientX,
+    maxDelta = window.innerWidth / 2;
+
+  const percentage = (touchDelta / maxDelta) * -100,
+    nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
 
   track.dataset.percentage = nextPercentage;
 
@@ -86,7 +129,6 @@ function expandProjects() {
   projectsTitle.classList.toggle("hidden");
   expProjects.classList.toggle("hidden");
 }
-
 
 function expandContacts() {
   const contacts = document.getElementById("contacts");
